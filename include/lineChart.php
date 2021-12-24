@@ -14,7 +14,7 @@
         }
 ?>
 <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" style="min-width: 500px; height: 500px; margin: 0 auto"></canvas>
 </div>
         <script>
             //Setup Block
