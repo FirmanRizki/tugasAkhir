@@ -46,7 +46,7 @@
 				include "include/profile.php";
 				break;					
 			default:
-				echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
+				echo "<center><h3>Maaf. Halaman Dalam Pembangunan</h3></center>";
 				break;
 		}
 	}else{
