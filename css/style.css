@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(8, 31, 92);
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 14px;
+}
+
+.content{
+	width: 85%;
+	margin: 10px auto;
+}
+ 
+/*header*/
+header{
+	background-color: white;
+	padding: 20px 10px;
+	border-radius: 5px;
+	border: 1px solid #f0f0f0;
+	margin-bottom: 10px;
+}
+ 
+header h2.judul,
+header h6.deskripsi{
+	text-align: center;	
+}
+ 
+/*menu navigasi*/
+.menu{
+	background-color: #92beda;
+	border: 1px solid #f0f0f0;
+	border-radius: 8px;	
+	margin-bottom: 10px;
+
+}
+ 
+div.menu ul {
+	list-style:none;
+	overflow: hidden;
+}
+ 
+ 
+div.menu ul li {
+	float:left;		
+	text-transform:none;
+}
+ 
+div.menu ul li a {
+	display:block;	
+	padding:0 20px;
+	text-decoration:none;
+	color:#2c2c2c;
+	font-family:'Roboto',sans-serif;
+	font-size:15px;
+	font-weight:400;
+	transition:all 0.3s ease-in-out;
+}
+ 
+div.menu ul li a:hover,
+div.menu ul li a.hoverover {	
+	cursor:pointer;	
+	color:#fff;
+}
+ 
+div.badan{
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	border: 1px solid #ffffff;
+	margin-bottom: 10px;
+}
+ 
+div.halaman{
+	text-align: center;
+	padding: 30px 20px;	
+}
+.footer {
+	position:fixed;
+	left: 100;
+	bottom: 0;
+	width: 85%;
+	background-color: rgb(255, 255, 255);
+	color: rgb(7, 7, 7);
+	text-align: center;
+}
