@@ -23,6 +23,8 @@
 			<li><a href="index.php?page=home">Home</a></li>
 			<li><a href="index.php?page=grafik">Grafik</a></li>
 			<li><a href="index.php?page=realtimedata">Realtime Data</a></li>
+			<li><a href="index.php?page=#">Search History</a></li>
+			<li><a href="index.php?page=#">Realtime Data</a></li>
 		</ul>
 	</div>
     <div class="badan">
