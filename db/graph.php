@@ -8,7 +8,7 @@
 		$array[][] = $row1['date'];
 	}
 	echo json_encode(array("date"=> $array[0][0]));
-
+ 
 	// Data  for permukaan
 	$permukaan = "SELECT permukaan FROM datasensor";
 	$result2 = $conn->query($permukaan);

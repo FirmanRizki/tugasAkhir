@@ -58,7 +58,7 @@ $(function () {
             series: [{  
                 name: 'Permukaan',  
         //data yang akan ditampilkan 
-                data: 
+                data: [1660, 1946,1632,2590,3004,1000]
             }]
         });
     });
