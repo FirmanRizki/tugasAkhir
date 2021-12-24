@@ -14,7 +14,7 @@
         }
 ?>
 <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart"  style="min-width: 500px; height: 500px; margin: 0 auto"></canvas>
 </div>
         <script>
             //Setup Block
@@ -23,11 +23,8 @@
             const data = {
                 labels:date,
                     datasets: [{
-<<<<<<< HEAD
                         label: 'Reservoir',
-=======
                         label: 'Tinggi Reservoir',
->>>>>>> e56b69488da41a95f47ac10324ad37513e75e310
                         data: reservoir,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
