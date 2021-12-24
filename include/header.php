@@ -35,7 +35,7 @@
 				include "include/home.php";
 				break;
 			case 'grafik':
-				include "include/grafik.php";
+				include "include/lineChart.php";
 				break;
 			case 'realtimedata':
 				include "include/realtimedata.php";

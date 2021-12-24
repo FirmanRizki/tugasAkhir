@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" ></link>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<link rel="stylesheet" type="text/css">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-        include("../db/connect_db.php");
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js" integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<?php
+        include("../tugasAkhir/db/connect_db.php");
         $datakirim = "SELECT * FROM datasensor";
         $result = $conn->query($datakirim);
         $reservoir = array();
@@ -21,11 +12,10 @@
             $reservoir[] = $row["reservoir"];
             $date[] = $row["date"];
         }
-        echo json_encode(array("result"=>$date)); 
-    ?>
-    <div>
-        <canvas id="myChart" width="50" height="50"></canvas>
-    </div>
+?>
+<div>
+        <canvas id="myChart"></canvas>
+</div>
         <script>
             //Setup Block
             const reservoir = <?php echo json_encode ($reservoir); ?>;
@@ -33,7 +23,7 @@
             const data = {
                 labels:date,
                     datasets: [{
-                        label: '# of Votes',
+                        label: 'Tinggi Reservoir',
                         data: reservoir,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -58,6 +48,8 @@
             const config ={
                 type: 'line',
                 data,
+                marginRight: 130,
+                marginBottom: 25,
                 options: {
                     scales: {
                         y: {
@@ -70,5 +62,3 @@
             const ctx = document.getElementById('myChart').getContext('2d');
             const myChart = new Chart(ctx, config);
         </script>
-</body>
-</html>
