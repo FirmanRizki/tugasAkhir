@@ -1,6 +1,6 @@
  <?php   
     // Data for date
-	$date = "SELECT date FROM datasensor";
+	$date = "SELECT * FROM datasensor";
 	$result1 = $conn->query($date);
 	$array = array();
 	while($row1 = mysqli_fetch_assoc($result1))
