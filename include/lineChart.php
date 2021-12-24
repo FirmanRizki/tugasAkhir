@@ -33,7 +33,7 @@
             const data = {
                 labels:date,
                     datasets: [{
-                        label: '# of Votes',
+                        label: 'Reservoir',
                         data: reservoir,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
