@@ -14,7 +14,7 @@
         }
 ?>
 <div>
-        <canvas id="myChart"  style="min-width: 500px; height: 500px; margin: 0 auto"></canvas>
+        <canvas id="myChart"></canvas>
 </div>
         <script>
             //Setup Block
@@ -24,7 +24,6 @@
                 labels:date,
                     datasets: [{
                         label: 'Reservoir',
-                        label: 'Tinggi Reservoir',
                         data: reservoir,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
