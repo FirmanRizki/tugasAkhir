@@ -7,56 +7,65 @@
         $result = $conn->query($datakirim);
         $reservoir = array();
         $date = array();
+        $permukaan = array();
         while ($row = mysqli_fetch_assoc($result))
         {
             $reservoir[] = $row["reservoir"];
             $date[] = $row["date"];
+            $permukaan[] = $row["permukaan"];
+            
         }
 ?>
 <div>
-        <canvas id="myChart" style="min-width: 500px; height: 500px; margin: 0 auto"></canvas>
+        <canvas id="myChart" style="min-width: 400px; height: 400px; margin: 0 auto"></canvas>
 </div>
         <script>
             //Setup Block
             const reservoir = <?php echo json_encode ($reservoir); ?>;
             const date = <?php echo json_encode ($date); ?>;
+            const permukaan = <?php echo json_encode ($permukaan); ?>;
             const data = {
                 labels:date,
                     datasets: [{
                         label: 'Reservoir',
                         data: reservoir,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 0.2)'
                         ],
                         borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                            'rgba(255, 99, 132, 1)'
                         ],
                         borderWidth: 1
-                    }]
+                    },{
+                        label: 'Permukaan',
+                        data: permukaan,
+                        backgroundColor: [
+                            'rgba(66, 136, 106, 0.8)'
+                
+                        ],
+                        borderColor: [
+                            'rgba(66, 255, 106, 1)'
+                        ],
+                        borderWidth: 1
+                    }
+                ]
             };
             //Config Block
-            const config ={
+            const config = {
                 type: 'line',
-                data,
-                marginRight: 130,
-                marginBottom: 25,
+                data: data,
                 options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+                    responsive: true,
+                    plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Grafik'
                     }
-                }
+                    }
+                },
             };
             //Render Block
             const ctx = document.getElementById('myChart').getContext('2d');
