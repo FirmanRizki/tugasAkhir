@@ -27,7 +27,7 @@
             echo"No Record Query Found.";
         }
     }catch(PDOException $e){
-    die("ERROR : Could not able to exceute $ sql." . $e-getMessage());
+    die("ERROR : Could not able to exceute $ sql." . $e->getMessage());
     }
     unset($pdo);
     ?>
