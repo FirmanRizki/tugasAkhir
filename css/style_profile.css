@@ -1,0 +1,51 @@
+body {
+    background: rgb(8, 31, 92);
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 14px;
+}
+
+.card {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #f0f1f3;
+    transform: scaleY(1);
+    transition: all 0.5s;
+    transform-origin: bottom
+}
+
+.card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #2592ff;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    transform-origin: bottom
+}
+
+.card:hover::after {
+    transform: scaleY(1)
+}
+
+.fonts {
+    font-style: italic;
+    font-size: 16px
+}

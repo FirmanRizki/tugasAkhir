@@ -24,7 +24,7 @@
 			<li><a href="index.php?page=grafik">Grafik</a></li>
 			<li><a href="index.php?page=realtimedata">Realtime Data</a></li>
 			<li><a href="index.php?page=#">Search History</a></li>
-			<li><a href="index.php?page=#">Realtime Data</a></li>
+			<li><a href="index.php?page=profil">Profil</a></li>
 		</ul>
 	</div>
     <div class="badan">
@@ -41,7 +41,10 @@
 				break;
 			case 'realtimedata':
 				include "include/realtimedata.php";
-				break;			
+				break;
+			case 'profil':
+				include "include/profile.php";
+				break;					
 			default:
 				echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
 				break;
