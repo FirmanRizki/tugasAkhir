@@ -30,7 +30,7 @@
                         label: 'Reservoir',
                         data: reservoir,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)'
+                            'rgba(255, 99, 132, 0.5)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)'
@@ -40,11 +40,11 @@
                         label: 'Permukaan',
                         data: permukaan,
                         backgroundColor: [
-                            'rgba(66, 136, 106, 0.8)'
+                            'rgba(32, 120, 255, 0.5)'
                 
                         ],
                         borderColor: [
-                            'rgba(66, 255, 106, 1)'
+                            'rgba(32, 120, 255, 1)'
                         ],
                         borderWidth: 1
                     }
