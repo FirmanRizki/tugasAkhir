@@ -30,24 +30,28 @@ if(isset($_GET['cari'])){
                 <th scope="col">Status Reservoir</th>
             </tr>
             </thead>
+            <tbody>
+                
             <?php 
             if(isset($_GET['cari'])){
                 $cari = $_GET['cari'];
-                $data = mysql_query("SELECT * FROM datasensor where statusp like '%".$cari."%'");				
+                $data = mysqli_query("SELECT * FROM datasensor where statusp like '%".$cari."%'");				
             }else{
-                $data = mysql_query("SELECT * from datasensor");		
+                $data = mysqli_query("SELECT * from datasensor");		
             }
             $no = 1;
-            while($d = mysql_fetch_array($data)){
+            while($dt = mysqli_fetch_array($data)){
             ?>
             <tr>
                 <td><?php echo $no++; ?></td>
-                <td><?php echo $d['date']; ?></td>
-                <td><?php echo $d['permukaan']; ?></td>
-                <td><?php echo $d['statusp']; ?></td>
-                <td><?php echo $d['reservoir']; ?></td>
-                <td><?php echo $d['statusr']; ?></td>
+                <td><?php echo $dt['date']; ?></td>
+                <td><?php echo $dt['permukaan']; ?></td>
+                <td><?php echo $dt['statusp']; ?></td>
+                <td><?php echo $dt['reservoir']; ?></td>
+                <td><?php echo $dt['statusr']; ?></td>
             </tr>
             <?php } ?>
+
+            </tbody>
         </table>
 </center>
