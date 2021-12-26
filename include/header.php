@@ -23,7 +23,7 @@
 			<li><a href="index.php?page=home">Home</a></li>
 			<li><a href="index.php?page=grafik">Grafik</a></li>
 			<li><a href="index.php?page=realtimedata">Realtime Data</a></li>
-			<li><a href="index.php?page=#">Search History</a></li>
+			<li><a href="index.php?page=caridata">Search History</a></li>
 			<li><a href="index.php?page=profil">Profil</a></li>
 		</ul>
 	</div>
@@ -44,6 +44,9 @@
 				break;
 			case 'profil':
 				include "include/profile.php";
+				break;
+			case 'caridata':
+				include "include/caridata.php";
 				break;					
 			default:
 				echo "<center><h3>Maaf. Halaman Dalam Pembangunan</h3></center>";
