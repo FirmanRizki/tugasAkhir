@@ -16,26 +16,38 @@ if(isset($_GET['cari'])){
 	echo "<b>Hasil pencarian : ".$cari."</b>";
 }
 ?>
+
 <center>
-<table border="1">
-	<tr>
-		<th>No</th>
-		<th>Status Permukaan</th>
-	</tr>
-	<?php 
-	if(isset($_GET['cari'])){
-		$cari = $_GET['cari'];
-		$data = mysql_query("select * from kirimdata where statusp like '%".$cari."%'");				
-	}else{
-		$data = mysql_query("select * from kirimdata");		
-	}
-	$no = 1;
-	while($d = mysql_fetch_array($data)){
-	?>
-	<tr>
-		<td><?php echo $no++; ?></td>
-		<td><?php echo $d['statusp']; ?></td>
-	</tr>
-	<?php } ?>
-</table>
-    </center>
+<br>
+<table class="table table-dark" align="center" border=1>
+            <thead>
+                <tr>
+                <th scope="col">No</th>
+                <th scope="col">Tanggal</th></th>
+                <th scope="col">Ketinggian Air Permukaan</th>
+                <th scope="col">Status Permukaan</th>
+                <th scope="col">Ketinggian Air Reservoir</th>
+                <th scope="col">Status Reservoir</th>
+            </tr>
+            </thead>
+            <?php 
+            if(isset($_GET['cari'])){
+                $cari = $_GET['cari'];
+                $data = mysql_query("SELECT * FROM datasensor where statusp like '%".$cari."%'");				
+            }else{
+                $data = mysql_query("SELECT * from datasensor");		
+            }
+            $no = 1;
+            while($d = mysql_fetch_array($data)){
+            ?>
+            <tr>
+                <td><?php echo $no++; ?></td>
+                <td><?php echo $d['date']; ?></td>
+                <td><?php echo $d['permukaan']; ?></td>
+                <td><?php echo $d['statusp']; ?></td>
+                <td><?php echo $d['reservoir']; ?></td>
+                <td><?php echo $d['statusr']; ?></td>
+            </tr>
+            <?php } ?>
+        </table>
+</center>
