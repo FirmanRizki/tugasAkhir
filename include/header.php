@@ -46,7 +46,7 @@
 				include "include/profile.php";
 				break;
 			case 'caridata':
-				include "include/caridata.php";
+				include "include/pencariansederhana.php";
 				break;					
 			default:
 				echo "<center><h3>Maaf. Halaman Dalam Pembangunan</h3></center>";

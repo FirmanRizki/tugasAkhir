@@ -11,7 +11,7 @@
     <br>
     <h4>Cari Data</h4>
 
-    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+    <form action="caridata.php" method="GET">
 
     <div class="form-group">
         <label for="sel1">Pencarian Untuk Ketinggian Permukaan : Aman, Siaga 1, Siaga 2, Siaga3, dan Banjir</label>
