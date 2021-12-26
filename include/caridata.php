@@ -16,7 +16,6 @@ if(isset($_GET['cari'])){
 	echo "<b>Hasil pencarian : ".$cari."</b>";
 }
 ?>
-
 <center>
 <br>
 <table class="table table-dark" align="center" border=1>
@@ -31,26 +30,8 @@ if(isset($_GET['cari'])){
             </tr>
             </thead>
             <tbody>
-                
-            <?php 
-            if(isset($_GET['cari'])){
-                $cari = $_GET['cari'];
-                $data = mysqli_query("SELECT * FROM datasensor where statusp like '%".$cari."%'");				
-            }else{
-                $data = mysqli_query("SELECT * from datasensor");		
-            }
-            $no = 1;
-            while($dt = mysqli_fetch_array($data)){
-            ?>
-            <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $dt['date']; ?></td>
-                <td><?php echo $dt['permukaan']; ?></td>
-                <td><?php echo $dt['statusp']; ?></td>
-                <td><?php echo $dt['reservoir']; ?></td>
-                <td><?php echo $dt['statusr']; ?></td>
-            </tr>
-            <?php } ?>
+            <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+            <script type="text/javascript" src="updateTable.js"></script>
 
             </tbody>
         </table>
