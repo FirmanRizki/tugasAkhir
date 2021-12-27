@@ -20,9 +20,7 @@
         <canvas id="myChart"></canvas>
 </div>
         <script>
-            //Setup Block
-            myChart.canvas.parentNode.style.height ='128px';
-            myChart.canvas.parentNode.style.width ='128px';
+            //Setup Block        
             const reservoir = <?php echo json_encode ($reservoir); ?>;
             const date = <?php echo json_encode ($date); ?>;
             const permukaan = <?php echo json_encode ($permukaan); ?>;
