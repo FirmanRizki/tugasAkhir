@@ -43,7 +43,7 @@
 		<tbody>
 			<?php 
 			//untuk meinclude kan koneksi
-			include('../db/connect_db.php');
+			include('db/connect_db.php');
 
 				//jika kita klik cari, maka yang tampil query cari ini
 				if(isset($_GET['kata_cari'])) {
