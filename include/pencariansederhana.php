@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>PENCARIAN GILACODING</title>
+	<link rel="stylesheet" type="text/css" href="css/style_profile.css">
 	<style type="text/css">
-		* {
-			font-family: "Trebuchet MS";
-		}
+		*
 		h1 {
 			text-transform: uppercase;
 			color: salmon;
@@ -23,10 +18,11 @@
 			text-align: left;
 		}
 	</style>
-</head>
+
 <body>
 	<center><h1>Pencarian Data Air</h1></center>
-	<form method="GET" action="" style="text-align: center;">
+
+	<form method="GET" action="index.php?page=caridata.php?" style="text-align: center; ">
 		<label>Kata Pencarian : </label>
 		<input type="text" name="kata_cari" value="<?php if(isset($_GET['kata_cari'])) { echo $_GET['kata_cari']; } ?>"  />
 		<button type="submit">Cari</button>
@@ -40,6 +36,8 @@
 				<th>Status Reservoir</th>
 			</tr>
 		</thead>
+
+		
 		<tbody>
 			<?php 
 			//untuk meinclude kan koneksi
@@ -79,5 +77,3 @@
 
 		</tbody>
 	</table>
-</body>
-</html>
