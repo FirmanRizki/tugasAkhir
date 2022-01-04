@@ -1,7 +1,6 @@
 <?php
 include "connect_db.php";
 $var1 = $_GET['data1'];
-$var2 = $_GET['data2'];
 $statper = $_GET['data1'];
 if ($statper >=0 && $statper<=15){
     $ketper="BANJIR";
@@ -20,6 +19,7 @@ if ($statper >15 && $statper<=25){
 else {
     $ketper="AMAN";
 }
+$var2 = $_GET['data2'];
 $statres = $_GET['data2'];
 if ($statres >=0 && $statres<=25){
     $ketres="RESERVOIR PENUH";

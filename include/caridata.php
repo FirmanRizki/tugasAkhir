@@ -9,7 +9,7 @@
 
 <body>
     <div class="container">
-        <input type="text" id="search" class="form-control mt-3 mb-5" placeholder="serach name...">
+        <input type="text" id="search" class="form-control mt-3 mb-5" placeholder="Search Status...">
         <div class="table-responsive">
             <table class="table table-striped table-hover">
                 <thead>

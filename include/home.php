@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <center><br><br><br><br><br><br>
 <img src="img/telu.png" width="150px" height="150px" /> <br>
 <font Size="6" face="Helvetica">Teknik Telekomunikasi</font> <br>
