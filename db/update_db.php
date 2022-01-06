@@ -1,25 +1,22 @@
 <?php
 include "connect_db.php";
 $var1 = $_GET['data1'];
+$var2 = $_GET['data2'];
 $statper = $_GET['data1'];
-if ($statper >=0 && $statper<=15){
+if ($statper >0 && $statper<=20){
     $ketper="BANJIR";
-}else
-if ($statper >15 && $statper<=25){
-    $ketper="SIAGA 3";
 }
 else
-if ($statper >15 && $statper<=25){
+if ($statper >20 && $statper<=30){
     $ketper="SIAGA 2";
 }
 else
-if ($statper >15 && $statper<=25){
+if ($statper >30 && $statper<=40){
     $ketper="SIAGA 1";
 }
 else {
     $ketper="AMAN";
 }
-$var2 = $_GET['data2'];
 $statres = $_GET['data2'];
 if ($statres >=0 && $statres<=25){
     $ketres="RESERVOIR PENUH";

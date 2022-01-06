@@ -22,8 +22,8 @@
 		<ul>
 			<li><a href="index.php?page=home">Home</a></li>
 			<li><a href="index.php?page=grafik">Grafik</a></li>
-			<li><a href="index.php?page=realtimedata">Realtime Data</a></li>
-			<li><a href="index.php?page=caridata">Search History</a></li>
+			<li><a href="index.php?page=rekapdata">Rekap Data</a></li>
+			<li><a href="index.php?page=realtime">Realtime Data</a></li>
 			<li><a href="index.php?page=profil">Profil</a></li>
 		</ul>
 	</div>
@@ -39,15 +39,15 @@
 			case 'grafik':
 				include "include/lineChart.php";
 				break;
-			case 'realtimedata':
-				include "include/realtimedata.php";
+			case 'rekapdata':
+				include "include/rekapdata.php";
 				break;
 			case 'profil':
 				include "include/profile.php";
-				break;
-			case 'caridata':
-				include "include/caridata.php";
-				break;					
+				break;	
+			case 'realtime':
+					include "include/rdt.php";
+					break;					
 			default:
 				echo "<center><h3>Maaf. Halaman Dalam Pembangunan</h3></center>";
 				break;

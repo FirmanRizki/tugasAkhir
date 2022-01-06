@@ -16,11 +16,11 @@
             
         }
 ?>
-<div class="chart-container" style="position: flex; height:75vh; width:80vw">
-        <canvas id="myChart" style="height:75vh; width:80vw" ></canvas>
+<div>
+        <canvas id="myChart" style="min-width: 400px; height: 400px; margin: 0 auto"></canvas>
 </div>
         <script>
-            //Setup Block        
+            //Setup Block
             const reservoir = <?php echo json_encode ($reservoir); ?>;
             const date = <?php echo json_encode ($date); ?>;
             const permukaan = <?php echo json_encode ($permukaan); ?>;
