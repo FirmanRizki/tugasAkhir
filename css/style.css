@@ -36,10 +36,10 @@ header h6.deskripsi{
 	border: 1px solid #f0f0f0;
 	border-radius: 8px;	
 	margin-bottom: 10px;
-
+	margin-top: 10px;	
+	padding-top: 8px;
 }
- 
-div.menu ul {
+div.menu ul {	
 	list-style:none;
 	overflow: hidden;
 }
@@ -71,7 +71,7 @@ div.badan{
 	background-color: rgb(255, 255, 255);
 	border-radius: 5px;
 	border: 1px solid #ffffff;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
  
 div.halaman{
@@ -80,6 +80,7 @@ div.halaman{
 }
 .footer {
 	position:fixed;
+	border-radius: 5px;
 	left: 100;
 	bottom: 0;
 	width: 85%;

@@ -2,7 +2,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 <?php
-        include("../tugasAkhir/db/connect_db.php");
+        include("../databanjir/db/connect_db.php");
         $datakirim = "SELECT * FROM datasensor";
         $result = $conn->query($datakirim);
         $reservoir = array();
@@ -16,8 +16,8 @@
             
         }
 ?>
-<div>
-        <canvas id="myChart" style="min-width: 400px; height: 400px; margin: 0 auto"></canvas>
+<div class="chart-container" style="position: flex; height:75vh; width:80vw">
+        <canvas id="myChart" style="height:75vh; width:80vw" ></canvas>
 </div>
         <script>
             //Setup Block
