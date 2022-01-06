@@ -46,10 +46,10 @@
 				include "include/profile.php";
 				break;	
 			case 'realtime':
-					include "include/rdt.php";
-					break;					
+				include "include/rdt.php";
+				break;					
 			default:
-				echo "<center><h3>Maaf. Halaman Dalam Pembangunan</h3></center>";
+				echo "<center><h3>Maaf. Halaman Tidak Ditemukan</h3></center>";
 				break;
 		}
 	}else{
