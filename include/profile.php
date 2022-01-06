@@ -6,7 +6,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-7">
                 <div class="card p-3 py-4">
-                    <div> <img src="../tugasAkhir/img/profil.jpg" width="100" class="rounded-circle"> </div>
+                    <div> <img src="../databanjir/img/FotoResmi.jpg" width="100" class="rounded-circle"> </div>
 
                         <h5 class="mt-2 mb-0">Firman Rizkianoor</h5> <span>Teknik Telekomunikasi</span> <br>
                         <div class="px-4 mt-1">
