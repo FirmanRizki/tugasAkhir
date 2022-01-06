@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="container" style="text-align: center; width:200px position: flex">
+    <div class="container" style="text-align: center; width:200px position flex">
         <h3>Ketinggian Air Permukaan</h3>
          <div class="panel panel-default">
              <div class="panel-body">

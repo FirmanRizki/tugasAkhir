@@ -2,7 +2,7 @@
 $konek = mysqli_connect("localhost","root","","kirimdata");
 $sql = mysqli_query($konek, "SELECT * FROM datasensor");
 $data = mysqli_fetch_array($sql);
-$nilai = $data["permukaan"];
+$nilai = $data["permukaan"][-1];
 
-echo $nilai ;
+echo $nilai;
 ?>
