@@ -10,14 +10,14 @@ function done(){
 }
 
 function update(){
-    $.getJSON("db/result_permukaan.php", function(data){
+    $.getJSON("db/result_reservoir.php", function(data){
         $("tbody").empty();
         var no=1;
         $.each(data.result, function(){
             $("tbody").append("<tr><td>"+(no++)+"</td><td>"+
             this['date']+"</td><td>"+
-            this['permukaan']+"</td><td>"+
-            this['statusp']+"</td><td>"+"</td></tr>");
+            this['reservoir']+"</td><td>"+
+            this['statusr']+"</td><td>"+"</td></tr>");
         });
     });
 }

@@ -1,6 +1,6 @@
 <?php
     include "connect_db.php";
-	$datakirim = "SELECT * FROM datasensor";
+	$datakirim = "SELECT * FROM datapermukaan";
 	$result = $conn->query($datakirim);
 	while ($row = mysqli_fetch_assoc($result))
 	{

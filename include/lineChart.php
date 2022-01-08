@@ -3,7 +3,7 @@
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 <?php
         include("../databanjir/db/connect_db.php");
-        $datakirim = "SELECT * FROM datasensor";
+        $datakirim = "SELECT * FROM datapermukaan";
         $result = $conn->query($datakirim);
         $reservoir = array();
         $date = array();

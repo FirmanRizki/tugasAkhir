@@ -23,6 +23,7 @@
 			<li><a href="index.php?page=home">Home</a></li>
 			<li><a href="index.php?page=grafik">Grafik</a></li>
 			<li><a href="index.php?page=rekapdata">Rekap Data</a></li>
+			<li><a href="index.php?page=rekapdata2">Rekap Reservoir</a></li>
 			<li><a href="index.php?page=realtime">Realtime Data</a></li>
 			<li><a href="index.php?page=profil">Profil</a></li>
 		</ul>
@@ -41,6 +42,9 @@
 				break;
 			case 'rekapdata':
 				include "include/rekapdata.php";
+				break;
+			case 'rekapdata2':
+				include "include/rekapreservoir.php";
 				break;
 			case 'profil':
 				include "include/profile.php";
