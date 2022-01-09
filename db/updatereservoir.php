@@ -1,15 +1,16 @@
 <?php
+
 include "connect_db.php";
 $var2 = $_GET['data2'];
 $statres = $_GET['data2'];
 
-if ($statres >=0 && $statres<=25){
+if ($statres >=0 && $statres<=10){
     $ketres="RESERVOIR PENUH";
 }else
-if ($statres >25 && $statres<=30){
+if ($statres >10 && $statres<=15){
     $ketres="RESERVOIR LEVEL 2";
 }else
-if ($statres >30 && $statres<=35){
+if ($statres >15 && $statres<=20){
     $ketres="RESERVOIR LEVEL 1";
 }
 else {
@@ -17,5 +18,5 @@ else {
 }
 
 mysqli_query($conn, "INSERT INTO datareservoir(reservoir,statusr) 
-                VALUES('$var2','$ketres')");
+                VALUES('$var2','$ketres')");   
 ?>

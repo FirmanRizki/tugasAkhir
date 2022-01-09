@@ -1,4 +1,5 @@
 <?php
+
 include "connect_db.php";
 $var1 = $_GET['data1'];
 $statper = $_GET['data1'];
@@ -17,6 +18,6 @@ else {
     $ketper="AMAN";
 }
 
-mysqli_query($conn, "INSERT INTO datapermukaan(permukaan,statusp,reservoir,statusr) 
+mysqli_query($conn, "INSERT INTO datapermukaan(permukaan,statusp) 
                 VALUES('$var1','$ketper')");
 ?>

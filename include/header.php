@@ -21,8 +21,9 @@
 	<div class="menu">
 		<ul>
 			<li><a href="index.php?page=home">Home</a></li>
-			<li><a href="index.php?page=grafik">Grafik</a></li>
-			<li><a href="index.php?page=rekapdata">Rekap Data</a></li>
+			<li><a href="index.php?page=grafikbanjir">Grafik Banjir</a></li>
+			<li><a href="index.php?page=grafikreservoir">Grafik Reservoir</a></li>
+			<li><a href="index.php?page=rekapdata">Rekap Banjir</a></li>
 			<li><a href="index.php?page=rekapdata2">Rekap Reservoir</a></li>
 			<li><a href="index.php?page=realtime">Realtime Data</a></li>
 			<li><a href="index.php?page=profil">Profil</a></li>
@@ -37,8 +38,11 @@
 			case 'home':
 				include "include/home.php";
 				break;
-			case 'grafik':
-				include "include/lineChart.php";
+			case 'grafikbanjir':
+				include "include/grafikpermukaan.php";
+				break;
+			case 'grafikreservoir':
+				include "include/grafikreservoir.php";
 				break;
 			case 'rekapdata':
 				include "include/rekapdata.php";
